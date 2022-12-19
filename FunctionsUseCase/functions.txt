@@ -1,0 +1,11 @@
+We have now, updated the main.tf in this configuration directory and added a new resource block to create a S3 bucket called sonic-media.
+Create an additional resource called upload_sonic_media to upload the files listed in the variable called media to this bucket.
+
+Use the following specifications:
+
+Use the for_each meta-argument to upload all the elements of the media variable.
+bucket: Use reference expression to the bucket sonic-media.
+source: Each element in the variable called media.
+key: Should be the name of the files being uploaded (minus the /root). For an example, eggman.jpg, shadow.jpg e.t.c.
+Do not alter the variables!
+When ready, run terraform apply to create the bucket and upload the items.

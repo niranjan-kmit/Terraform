@@ -1,0 +1,20 @@
+Which command would you use to show the attributes of the resource called classics stored in the terraform state?
+
+ terraform state show local_file.classics
+
+
+What is the value of the attribute called id that is created for the local file resource called top10?
+
+  terraform state show local_file.top10
+
+We no longer wish to manage the file located at /root/anime/hall-of-fame.txt by Terraform. Remove the resource responsible for this file completely from the management of terraform
+
+  terraform state rm local_file.hall_of_fame
+
+What is the id of the random_pet resource called super_pet_2 in the state file?
+
+  terraform state show random_pet.super_pet_2
+
+Rename the resource from super_pet_1 to ultra_pet.
+
+  terraform state mv random_pet.super_pet_1 random_pet.ultra_pet
